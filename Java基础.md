@@ -525,10 +525,15 @@ hashCode() 的默认行为是对堆上的对象产生独特值。如果没有重
 #### 51.HashMap有时候会死循环，你知道是什么原因吗？
 
 详见：https://www.cnblogs.com/williamjie/p/11089522.html
+1.7版本
+并发后的rehash头插，倒置链表。导致死循环
+1.8之后转为尾插法
 
 #### 52.ConcurrentHashMap是怎么实现的？
 
 详见：https://www.infoq.cn/article/ConcurrentHashMap/
+锁分段技术，将数据一段段存储，然后每一段都分配一把锁，当一个线程占用锁访问这组数据的时候，其余的线程不能访问，达到线程安全的目的。同时不会影响其余分组的线程查询。
+两次hash算法，减少hash冲突，使元素均匀的分布在每个segment，提高容器的存取效率。
 
 #### 53.静态代理和动态代理的区别
 

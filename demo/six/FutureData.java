@@ -5,8 +5,10 @@ package six;
  */
 public class FutureData implements Data {
 
-
-    protected RealData realdata = null; // 内部需要维护RealData
+    /**
+     * 内部需要维护RealData
+     */
+    protected RealData realdata = null;
 
     protected boolean isReady = false;
 
@@ -20,12 +22,14 @@ public class FutureData implements Data {
         notifyAll();
     }
 
-    //会等待RealData构造完成
+    /**
+     * 会等待RealData构造完成
+     */
     @Override
     public synchronized String getResult() {
         while (!isReady) {
             try {
-                //一直等待，直到RealData被注入
+                //一直等待，直到RealData被注入   线程进入锁的等待队列
                 wait();
             } catch (InterruptedException e) {
             }

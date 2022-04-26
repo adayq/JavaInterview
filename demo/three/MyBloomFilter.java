@@ -2,6 +2,9 @@ package three;
 
 import java.util.BitSet;
 
+/**
+ * @author Lenovo
+ */
 public class MyBloomFilter {
     /**
      * 2 << 26表示32亿个比特位

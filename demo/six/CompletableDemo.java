@@ -36,6 +36,9 @@ public class CompletableDemo {
             public void run() {
                 try {
                     synchronized (object) {
+                        /**
+                         * 线程进入等待队列
+                         */
                         object.wait();
                     }
                     Thread.sleep(1000);
