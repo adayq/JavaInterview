@@ -176,3 +176,26 @@ https://zhuanlan.zhihu.com/p/60257737
 https://www.cnblogs.com/qmillet/p/12523636.html
 
 https://blog.csdn.net/a745233700/article/details/80977133
+
+Object Relational Mapping
+
+数据库的执行流程：
+1.注册数据库驱动类，指定数据库地址，其中包括 DB 的用户名、密码及其他连接信息；
+2.调用 DriverManager.getConnection() 方法创建 Connection 连接到数据库；
+3.调用 Connection 的 createStatement() 或 prepareStatement() 方法，创建 Statement 对象，此时会指定 SQL（或是 SQL 语句模板 + SQL 参数）；
+4.通过 Statement 对象执行 SQL 语句，得到 ResultSet 对象，也就是查询结果集；
+5.遍历 ResultSet，从结果集中读取数据，并将每一行数据库记录转换成一个 JavaBean 对象；
+6.关闭 ResultSet 结果集、Statement 对象及数据库 Connection，从而释放这些对象占用的底层资源
+
+
+mybatis  三层架构：
+1.基础支撑层
+    类型转化模块，日志模块(适配器模块)，反射工具模块，binding模块，数据源模块，缓存模块，解析器模块，事务管理模块
+2.核心处理层
+    配置解析，sql解析与scripting模块，sql执行，插件
+3.接口层
+    接口层是mybatis暴露给调用的接口集合，包括sqlSession，sqlSessionFactory
+
+Reflector 是 MyBatis 反射模块的基础
+
+    
