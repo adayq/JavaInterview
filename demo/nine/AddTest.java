@@ -1,5 +1,7 @@
 package nine;
 
+import java.util.HashSet;
+
 public class AddTest {
 
     public static void main(String[] args) {
@@ -11,5 +13,7 @@ public class AddTest {
         int j=1;
         j=(++j)+(++j)+(++j)+(++j);
         System.out.println(j);
+
+        HashSet hashSet = new HashSet();
     }
 }
