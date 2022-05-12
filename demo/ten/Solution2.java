@@ -5,7 +5,14 @@ package ten;
  */
 public class Solution2 {
     public static void main(String[] args) {
+        //第一次只有三个人
+        System.out.println(threePeople(1));
+        //第二次只有三个人
         System.out.println(threePeople(2));
+        //第三次只有三个人
+        System.out.println(threePeople(3));
+        //第一千次只有三个人
+        System.out.println(threePeople(1000));
     }
 
     /**
