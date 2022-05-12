@@ -13,16 +13,16 @@ public class Solution001 {
         if (root == null) {
             return false;
         }
-        return isSymmetricHelper(root.left, root.right);
+        return isSymmetricHelper(root.getLeft(), root.getRight());
     }
 
     public boolean isSymmetricHelper(TreeNode left, TreeNode right) {
         if (right == null && left == null) {
             return true;
         }
-        if (right == null || left == null || left.val != right.val) {
+        if (right == null || left == null || left.getVal() != right.getVal()) {
             return false;
         }
-        return isSymmetricHelper( left.left,right.right) && isSymmetricHelper(left.right, right.left);
+        return isSymmetricHelper( left.getLeft(),right.getRight()) && isSymmetricHelper(left.getRight(), right.getLeft());
     }
 }

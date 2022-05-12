@@ -2,6 +2,8 @@ package ten;
 
 import five.TreeNode;
 
+import java.util.ArrayList;
+
 /**
  * 检查是否是平衡二叉树
  * @author Lenovo
@@ -13,6 +15,9 @@ public class Solution1 {
         TreeNode treeNode = new TreeNode();
         Solution1 solution1 = new Solution1();
         solution1.depth(treeNode);
+        ArrayList arrayList = new ArrayList();
+        arrayList.addAll(new ArrayList());
+        arrayList.add(new ArrayList());
     }
 
     public int depth(TreeNode root){
