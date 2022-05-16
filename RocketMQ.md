@@ -109,7 +109,7 @@ SelectMessageQueueByMachineRoom 没有实现
 
 #### 8.如何让RocketMQ保证消息的顺序消费？
 
-首先多个queue只能保证单个queue里的顺序，queue是典型的FIFO，天然顺序。多个queue同时消费是无法绝对保证消息的有序性的。所以总结如下：
+首先多个queue只能保证单个queue里的顺序，queue是典型的FIFO，天然顺序。多个queue 同时消费是无法绝对保证消息的有序性的。所以总结如下：
 
 同一topic，同一个QUEUE，发消息的时候一个线程去发送消息，消费的时候 一个线程去消费一个queue里的消息。
 
