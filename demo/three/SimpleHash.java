@@ -1,5 +1,8 @@
 package three;
 
+/**
+ * @author Lenovo
+ */
 public class  SimpleHash {
     private  int  cap;
     private  int  seed;
